@@ -15,6 +15,15 @@ int adiff(int A, int B){
 
   C = A - B;
 
+  if (C < (0-360)){
+    if (A > B){
+      B = 360 + B;
+    } else {
+      A = 360 + A;
+    }
+    C = A + B;
+  }
+
   if (C < 0){
     C = C * (0-1);
   }
